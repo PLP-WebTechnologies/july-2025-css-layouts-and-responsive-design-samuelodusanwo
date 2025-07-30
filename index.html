@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Demo - Flexbox & Grid</title>
+    <meta name="description" content="A beginner's example of responsive web design using CSS Flexbox and Grid for layout.">
+    <meta name="keywords" content="HTML, CSS, Flexbox, Grid, Responsive Web Design, RWD, beginner">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>My Responsive Website</h1>
+        <p>Adapting to any screen size!</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <main class="main-content">
+            <section id="home" class="intro-section">
+                <h2>Welcome to Our Site!</h2>
+                <p>This page showcases the power of modern CSS for building flexible and responsive layouts. Below, you'll see examples of both Flexbox and CSS Grid in action.</p>
+                <p>Try resizing your browser window to see how the layout adapts!</p>
+            </section>
+
+            <section id="about" class="flexbox-section">
+                <h2>Our Awesome Flexbox Features</h2>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <h3>Flexible Items</h3>
+                        <p>Items within this container adjust their size and position based on available space.</p>
+                    </div>
+                    <div class="flex-item">
+                        <h3>Easy Alignment</h3>
+                        <p>Perfect for aligning items in a single row or column, horizontally or vertically.</p>
+                    </div>
+                    <div class="flex-item">
+                        <h3>Content Distribution</h3>
+                        <p>Distribute space evenly or according to item content for clean layouts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="grid-section">
+                <h2>Explore Our Grid-Powered Services</h2>
+                <div class="grid-container">
+                    <div class="grid-item grid-span-2">
+                        <h3>Service A: Web Design</h3>
+                        <p>Crafting beautiful and functional websites tailored to your needs. This item spans two columns on wider screens!</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Service B: SEO Optimization</h3>
+                        <p>Helping your site rank higher in search engine results.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Service C: Content Creation</h3>
+                        <p>Engaging content that speaks to your audience.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Service D: Consulting</h3>
+                        <p>Expert advice to guide your digital strategy.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you!</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="user_email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="user_message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Article 1</a></li>
+                <li><a href="#">Project Showcase</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Our Team</a></li>
+            </ul>
+            <h3>Recent Updates</h3>
+            <p>New blog post on Flexbox vs. Grid published today!</p>
+            <p><small>July 29, 2025</small></p>
+        </aside>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>Built with HTML5, CSS Flexbox, and CSS Grid.</p>
+    </footer>
+
+</body>
+</html>

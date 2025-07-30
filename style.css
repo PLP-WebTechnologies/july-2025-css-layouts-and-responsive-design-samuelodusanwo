@@ -1,0 +1,253 @@
+/* --- Global Styles & Resets --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header Styling --- */
+.page-header {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- Navigation Styling (Flexbox) --- */
+.main-nav {
+    background-color: #343a40; /* Dark grey */
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes ul a flex container */
+    flex-direction: column; /* Stacks items vertically on small screens */
+    align-items: center; /* Centers items horizontally */
+    gap: 10px; /* Space between nav items */
+}
+
+.main-nav ul li a {
+    color: white;
+    padding: 8px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #007bff; /* Blue on hover */
+}
+
+/* --- Main Content Wrapper (Grid for overall layout on larger screens) --- */
+.content-wrapper {
+    display: grid;
+    /* Default for mobile: single column layout */
+    grid-template-columns: 1fr;
+    gap: 20px; /* Space between main content and sidebar */
+    padding: 0 15px; /* Padding on the sides of the wrapper */
+    max-width: 1200px; /* Max width for the whole content area */
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.main-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* --- Flexbox Section Styling --- */
+.flexbox-section h2, .grid-section h2, .contact-section h2 {
+    text-align: center;
+    color: #28a745; /* Green */
+    margin-bottom: 25px;
+}
+
+.flex-container {
+    display: flex; /* Make it a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Distribute items with space around them */
+    gap: 20px; /* Space between flex items */
+}
+
+.flex-item {
+    background-color: #e6ffed; /* Lighter green */
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 5px;
+    flex-basis: 300px; /* Initial size of items. They will grow/shrink. */
+    flex-grow: 1; /* Allows items to grow to fill available space */
+    text-align: center;
+}
+
+/* --- Grid Section Styling --- */
+.grid-container {
+    display: grid; /* Make it a grid container */
+    /* Default for mobile: single column */
+    grid-template-columns: 1fr;
+    gap: 20px; /* Space between grid items */
+}
+
+.grid-item {
+    background-color: #e0f2f7; /* Light blue */
+    border: 1px solid #b3e5fc;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- Form Styles --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* --- Footer Styling --- */
+.page-footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #343a40; /* Dark grey */
+    color: white;
+    margin-top: 30px;
+    font-size: 0.85em;
+}
+
+/* ==================================== */
+/* --- Responsive Design (Media Queries) --- */
+/* ==================================== */
+
+/* Tablet Layout (screens wider than 600px) */
+@media (min-width: 600px) {
+    .main-nav ul {
+        flex-direction: row; /* Navigation items become horizontal */
+        justify-content: center; /* Center them horizontally */
+    }
+
+    .flex-item {
+        /* On tablets, allow two items per row */
+        flex-basis: calc(50% - 20px); /* 50% width minus half of the gap */
+    }
+
+    .grid-container {
+        /* On tablets, two columns for the grid */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-item.grid-span-2 {
+        /* Service A spans two columns on tablet and up */
+        grid-column: span 2;
+    }
+}
+
+/* Desktop Layout (screens wider than 992px) */
+@media (min-width: 992px) {
+    .content-wrapper {
+        /* Main content and sidebar side-by-side */
+        grid-template-columns: 3fr 1fr; /* Main content takes 3 parts, sidebar 1 part */
+    }
+
+    .flex-item {
+        /* On desktops, three items per row */
+        flex-basis: calc(33.333% - 20px); /* Approx 33.33% minus gap */
+    }
+
+    .grid-container {
+        /* On desktops, three columns for the grid */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-item.grid-span-2 {
+        /* Service A still spans two columns on desktops */
+        grid-column: span 2;
+    }
+}
